@@ -1,5 +1,4 @@
 # ComfyUI-Modelscope-All
-Enter the ModelScope token (access token) and then call the model on ModelScope in the local Comfyui to generate the image.
 输入 ModelScope 令牌（访问令牌），然后在本地Comfyui中调用 ModelScope 上的模型以生成图像
 
 ModelScope访问令牌获取方式：
