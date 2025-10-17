@@ -1,2 +1,2 @@
 # ComfyUI-Modelscope-All
-Input the ModelScope Token (Access tokens), and call the model on ModelScope.
+Input the ModelScope token (access token), and call the model on ModelScope to generate the image.
