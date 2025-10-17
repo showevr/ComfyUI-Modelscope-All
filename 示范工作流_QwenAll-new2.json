@@ -1,0 +1,1953 @@
+{
+  "id": "ea87b0a7-6886-40be-938c-0be4bda8044b",
+  "revision": 0,
+  "last_node_id": 177,
+  "last_link_id": 263,
+  "nodes": [
+    {
+      "id": 77,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": [
+        37.7869873046875,
+        1356.997802734375
+      ],
+      "size": [
+        303.6851501464844,
+        330
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 115
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            260
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "89014d833d2ad0998d724090eff1456692692a1d",
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "longest",
+        2048,
+        "#000000"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 21,
+      "type": "PrimitiveInt",
+      "pos": [
+        -1526.366943359375,
+        1305.443603515625
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "INT",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            26,
+            146,
+            169
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        2,
+        "fixed"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 112,
+      "type": "ImpactSwitch",
+      "pos": [
+        -910.5709838867188,
+        1199.8419189453125
+      ],
+      "size": [
+        270,
+        162
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入1",
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": 164
+        },
+        {
+          "name": "select",
+          "type": "INT",
+          "widget": {
+            "name": "select"
+          },
+          "link": 167
+        },
+        {
+          "label": "输入2",
+          "name": "input2",
+          "type": "STRING",
+          "link": 165
+        },
+        {
+          "label": "输入3",
+          "name": "input3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "selected_value",
+          "type": "*",
+          "links": [
+            166
+          ]
+        },
+        {
+          "label": "标签",
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "f86c5afc68958afb89bf66898d6b5038ce98a096",
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        true
+      ],
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "PrimitiveInt",
+      "pos": [
+        -1526.366943359375,
+        1345.4658203125
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "INT",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        3,
+        "fixed"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "StringConcatenate",
+      "pos": [
+        -910.5709838867188,
+        1238.511962890625
+      ],
+      "size": [
+        282.3689270019531,
+        166
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 54
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ],
+      "shape": 1
+    },
+    {
+      "id": 31,
+      "type": "LayerUtility: If ",
+      "pos": [
+        -1526.366943359375,
+        1424.3062744140625
+      ],
+      "size": [
+        190.69363403320312,
+        68.75483703613281
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "if_condition",
+          "name": "if_condition",
+          "type": "*",
+          "link": 52
+        },
+        {
+          "label": "when_TRUE",
+          "name": "when_TRUE",
+          "type": "*",
+          "link": 51
+        },
+        {
+          "label": "when_FALSE",
+          "name": "when_FALSE",
+          "type": "*",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "label": "?",
+          "name": "?",
+          "type": "*",
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "89014d833d2ad0998d724090eff1456692692a1d",
+        "Node name for S&R": "LayerUtility: If ",
+        "aux_id": "chflame163/ComfyUI_LayerStyle"
+      },
+      "widgets_values": [],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "shape": 1
+    },
+    {
+      "id": 68,
+      "type": "StringConcatenate",
+      "pos": [
+        -910.5709838867188,
+        1349.1708984375
+      ],
+      "size": [
+        276.5519104003906,
+        166
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            123
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "请将以下文段翻译为英文：",
+        "",
+        ""
+      ],
+      "shape": 1
+    },
+    {
+      "id": 92,
+      "type": "LayerUtility: If ",
+      "pos": [
+        -1526.366943359375,
+        1518.9879150390625
+      ],
+      "size": [
+        190.69363403320312,
+        68.75483703613281
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "if_condition",
+          "name": "if_condition",
+          "type": "*",
+          "link": 144
+        },
+        {
+          "label": "when_TRUE",
+          "name": "when_TRUE",
+          "type": "*",
+          "link": 145
+        },
+        {
+          "label": "when_FALSE",
+          "name": "when_FALSE",
+          "type": "*",
+          "link": 146
+        }
+      ],
+      "outputs": [
+        {
+          "label": "?",
+          "name": "?",
+          "type": "*",
+          "links": [
+            147
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "89014d833d2ad0998d724090eff1456692692a1d",
+        "Node name for S&R": "LayerUtility: If ",
+        "aux_id": "chflame163/ComfyUI_LayerStyle"
+      },
+      "widgets_values": [],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "shape": 1
+    },
+    {
+      "id": 93,
+      "type": "ImpactSwitch",
+      "pos": [
+        -1249.96875,
+        1478.78564453125
+      ],
+      "size": [
+        210,
+        130.67005920410156
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入1",
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": 143
+        },
+        {
+          "name": "select",
+          "type": "INT",
+          "widget": {
+            "name": "select"
+          },
+          "link": 147
+        },
+        {
+          "label": "输入2",
+          "name": "input2",
+          "type": "STRING",
+          "link": 152
+        },
+        {
+          "label": "输入3",
+          "name": "input3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "selected_value",
+          "type": "*",
+          "links": [
+            156
+          ]
+        },
+        {
+          "label": "标签",
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "f86c5afc68958afb89bf66898d6b5038ce98a096",
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        true
+      ],
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "PrimitiveInt",
+      "pos": [
+        -1526.366943359375,
+        1266.2474365234375
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "INT",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            25,
+            145,
+            168
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 113,
+      "type": "LayerUtility: If ",
+      "pos": [
+        -910.5709838867188,
+        1154.4033203125
+      ],
+      "size": [
+        190.69363403320312,
+        68.75483703613281
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "if_condition",
+          "name": "if_condition",
+          "type": "*",
+          "link": 170
+        },
+        {
+          "label": "when_TRUE",
+          "name": "when_TRUE",
+          "type": "*",
+          "link": 168
+        },
+        {
+          "label": "when_FALSE",
+          "name": "when_FALSE",
+          "type": "*",
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "label": "?",
+          "name": "?",
+          "type": "*",
+          "links": [
+            167
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "89014d833d2ad0998d724090eff1456692692a1d",
+        "Node name for S&R": "LayerUtility: If ",
+        "aux_id": "chflame163/ComfyUI_LayerStyle"
+      },
+      "widgets_values": [],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "shape": 1
+    },
+    {
+      "id": 94,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -1753.853515625,
+        1188.505126953125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "BOOLEAN",
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            144
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 95,
+      "type": "ImpactSwitch",
+      "pos": [
+        -1525.505126953125,
+        1474.952392578125
+      ],
+      "size": [
+        270,
+        162
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入1",
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": 148
+        },
+        {
+          "name": "select",
+          "type": "INT",
+          "widget": {
+            "name": "select"
+          },
+          "link": 149
+        },
+        {
+          "label": "输入2",
+          "name": "input2",
+          "type": "STRING",
+          "link": 150
+        },
+        {
+          "label": "输入3",
+          "name": "input3",
+          "type": "STRING",
+          "link": 151
+        },
+        {
+          "label": "输入4",
+          "name": "input4",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "selected_value",
+          "type": "*",
+          "links": [
+            152,
+            155
+          ]
+        },
+        {
+          "label": "标签",
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "f86c5afc68958afb89bf66898d6b5038ce98a096",
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        true
+      ],
+      "shape": 1
+    },
+    {
+      "id": 81,
+      "type": "ModelScopeMultiTurnChat_Sevr",
+      "pos": [
+        -1267.2425537109375,
+        1424.2781982421875
+      ],
+      "size": [
+        306.47027587890625,
+        365.1272888183594
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "conversation_history",
+          "name": "conversation_history",
+          "shape": 7,
+          "type": "CONVERSATION_HISTORY",
+          "link": null
+        },
+        {
+          "label": "user_input",
+          "name": "user_input",
+          "type": "STRING",
+          "widget": {
+            "name": "user_input"
+          },
+          "link": 123
+        }
+      ],
+      "outputs": [
+        {
+          "label": "回复",
+          "name": "回复",
+          "type": "STRING",
+          "links": [
+            143
+          ]
+        },
+        {
+          "label": "对话历史",
+          "name": "对话历史",
+          "type": "CONVERSATION_HISTORY",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "showevr/ComfyUI-Modelscope-All",
+        "ver": "dda461b819caa1980fb386e8cb2e7cefc4642204",
+        "Node name for S&R": "ModelScopeMultiTurnChat_Sevr"
+      },
+      "widgets_values": [
+        "",
+        "你是一个强大的AI翻译官，当用户请求翻译时，你应该直接给出符合用户要求的提示词，此外不需任何废话",
+        "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        false,
+        "ms-e3961246-de9a-495a-bcd2-0dcdd696fc17",
+        ""
+      ],
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "LayerUtility: If ",
+      "pos": [
+        -1526.366943359375,
+        1390.7794189453125
+      ],
+      "size": [
+        190.69363403320312,
+        68.75483703613281
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "if_condition",
+          "name": "if_condition",
+          "type": "*",
+          "link": 18
+        },
+        {
+          "label": "when_TRUE",
+          "name": "when_TRUE",
+          "type": "*",
+          "link": 25
+        },
+        {
+          "label": "when_FALSE",
+          "name": "when_FALSE",
+          "type": "*",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "label": "?",
+          "name": "?",
+          "type": "*",
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "89014d833d2ad0998d724090eff1456692692a1d",
+        "Node name for S&R": "LayerUtility: If ",
+        "aux_id": "chflame163/ComfyUI_LayerStyle"
+      },
+      "widgets_values": [],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "shape": 1
+    },
+    {
+      "id": 37,
+      "type": "PreviewImage",
+      "pos": [
+        535.6864013671875,
+        931.0053100585938
+      ],
+      "size": [
+        461.8534851074219,
+        594.2127685546875
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 261
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 33,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1538.2108154296875,
+        947.764404296875
+      ],
+      "size": [
+        210,
+        121.11498260498047
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "请你将以下提示词白色元素全换成紫色：\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 24,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -1006.4835205078125,
+        963.5935668945312
+      ],
+      "size": [
+        298.8668518066406,
+        561.52587890625
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 156
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            157
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "f2838ed5e59de4d73cde5c98354b87a8d3200190",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "这是一幅充满古典韵味与动态美感的古风人像摄影作品。画面主体是一位年轻女性，她身着飘逸的浅蓝色汉服，正以一个优雅而有力的姿态持剑回眸。\n\n**人物细节：**\n- **面容与神态**：女子面容清秀，皮肤白皙，眉眼精致，眼神清澈而专注，直视镜头，嘴角微抿，流露出一种沉静、坚定又略带一丝英气的神情。\n- **发型与发饰**：她拥有一头乌黑亮丽的长发，被精心盘成高耸的古典发髻，发髻上点缀着数枚精巧的紫罗兰色花朵状发簪和发钗，与背景中的樱花相映成趣。\n- **服饰**：她穿着一件质地轻盈、半透明的浅蓝色广袖长袍，衣料如薄纱般飘逸，上面绣有或印有紫色的梅花或雪花图案，增添了清冷雅致的气质。宽大的袖子在动作中自然扬起，形成优美的弧线。\n- **手持武器**：她双手紧握一柄短剑（或匕首），剑身细长，剑柄为深色，雕刻有复杂的纹路，显得古朴而富有力量感。剑尖斜指向上方，与她的视线方向一致，暗示着某种即将发生的动作或内心的决意。\n\n**环境与构图：**\n- **背景**：背景是虚化的自然景致，主要由一棵开满白色小花的树木构成，枝干遒劲，花朵繁密，应为春季盛开的樱花或梨花。背景的模糊处理（大光圈浅景深）有效地突出了前景的人物主体。\n- **光影与色调**：整体光线柔和均匀，色调偏冷，以淡蓝、紫色和灰褐色为主，营造出一种宁静、空灵、略带仙气的氛围。\n- **构图与动态**：人物位于画面中央偏左，身体呈扭转姿态，衣袂飞扬，充满了动感。上方垂下的花枝巧妙地构成了画框的一部分，引导视线聚焦于人物。整个画面构图均衡，动静结合，既有静态的美感，又有瞬间爆发的力量感。\n\n**整体意境：**\n这幅图像成功塑造了一位“侠女”或“仙子”的形象——她既拥有传统东方女性的柔美与温婉，又具备武者的英姿与果敢。在春日花树下舞剑的场景，将自然之美、服饰之华与人物之神韵融为一体，传递出一种诗意、唯美且充满故事性的古典武侠或仙侠意境。"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 82,
+      "type": "ModelScopeImageGeneratorV2_Sevr",
+      "pos": [
+        -690.6090698242188,
+        930.6980590820312
+      ],
+      "size": [
+        210,
+        592.8887329101562
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 27,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            263
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "showevr/ComfyUI-Modelscope-All",
+        "ver": "dda461b819caa1980fb386e8cb2e7cefc4642204",
+        "Node name for S&R": "ModelScopeImageGeneratorV2_Sevr"
+      },
+      "widgets_values": [
+        "",
+        "色调艳丽，过曝，细节模糊不清，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，杂乱的背景，三条腿",
+        "Qwen/Qwen-Image",
+        "",
+        8,
+        "928x1664",
+        100,
+        4,
+        254917942,
+        "randomize",
+        1144,
+        2048,
+        "ms-e3961246-de9a-495a-bcd2-0dcdd696fc17"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "LoadImage",
+      "pos": [
+        -1318.3087158203125,
+        952.5888061523438
+      ],
+      "size": [
+        303.18341064453125,
+        354.95355224609375
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            121
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "PB-_temp_xrcsn_00001_pcqvt_1760671102.jpg",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 80,
+      "type": "ModelScopeVisionPromptInversion_Sevr",
+      "pos": [
+        -1320,
+        1341
+      ],
+      "size": [
+        304.769775390625,
+        178.7991485595703
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 121
+        }
+      ],
+      "outputs": [
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            150,
+            165
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "showevr/ComfyUI-Modelscope-All",
+        "ver": "dda461b819caa1980fb386e8cb2e7cefc4642204",
+        "Node name for S&R": "ModelScopeVisionPromptInversion_Sevr"
+      },
+      "widgets_values": [
+        "详细描述这幅图像内容，要求清晰、准确、全面",
+        "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "ms-e3961246-de9a-495a-bcd2-0dcdd696fc17",
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 79,
+      "type": "ModelScopeMultiTurnChat_Sevr",
+      "pos": [
+        -1538.00341796875,
+        1266.886962890625
+      ],
+      "size": [
+        210.2994140625,
+        258
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "conversation_history",
+          "name": "conversation_history",
+          "shape": 7,
+          "type": "CONVERSATION_HISTORY",
+          "link": null
+        },
+        {
+          "label": "user_input",
+          "name": "user_input",
+          "type": "STRING",
+          "widget": {
+            "name": "user_input"
+          },
+          "link": 119
+        }
+      ],
+      "outputs": [
+        {
+          "label": "回复",
+          "name": "回复",
+          "type": "STRING",
+          "links": [
+            151
+          ]
+        },
+        {
+          "label": "对话历史",
+          "name": "对话历史",
+          "type": "CONVERSATION_HISTORY",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "showevr/ComfyUI-Modelscope-All",
+        "ver": "dda461b819caa1980fb386e8cb2e7cefc4642204",
+        "Node name for S&R": "ModelScopeMultiTurnChat_Sevr"
+      },
+      "widgets_values": [
+        "",
+        "你是一个专业书写Ai绘图提示词的顶级专家，当用户请求你扩写、润色提示词时，你应该直接给出符合用户要求的提示词，此外不需任何废话",
+        "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        false,
+        "ms-e3961246-de9a-495a-bcd2-0dcdd696fc17",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 17,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -1755.1737060546875,
+        954.3222045898438
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "BOOLEAN",
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            18,
+            170
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 30,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -1755.4779052734375,
+        1071.78466796875
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "BOOLEAN",
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1537.6217041015625,
+        1129.8037109375
+      ],
+      "size": [
+        210,
+        182.38388061523438
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            148,
+            164
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "工笔重彩画风格， 一位身姿曼妙的女子立于水边，衣袂飘然，裙摆轻扬。她身着翠绿色长裙，腰间系着红色丝带，随风舞动。上身裸露，佩戴着青色珠串项链，双臂交叠于胸前，姿态优雅。她的发髻高耸，装饰繁复，花瓣从发间飘落，环绕周身。脚下是水墨渲染的池塘，几片荷叶与枯萎的莲花点缀其间，水面泛起淡淡涟漪。背景为古朴的米黄色纸张质感，整体画面充满古典诗意与神秘氛围。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 177,
+      "type": "PreviewImage",
+      "pos": [
+        -474.6505432128906,
+        930.7353515625
+      ],
+      "size": [
+        461.8534851074219,
+        594.2127685546875
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 263
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 108,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -1753.2332763671875,
+        1310.593017578125
+      ],
+      "size": [
+        211.01980590820312,
+        212.45343017578125
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "可选连接",
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "_二选一",
+        "showNav": false,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "max one"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 46,
+      "type": "LoadImage",
+      "pos": [
+        4.482133388519287,
+        931.0053100585938
+      ],
+      "size": [
+        282.4162902832031,
+        594.2816772460938
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            115
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_temp_czunp_00038_.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 175,
+      "type": "ModelScopeImageEditorV3_Sevr",
+      "pos": [
+        291.71435546875,
+        930.6730346679688
+      ],
+      "size": [
+        239.085546875,
+        593.9268188476562
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 260
+        }
+      ],
+      "outputs": [
+        {
+          "label": "edited_image",
+          "name": "edited_image",
+          "type": "IMAGE",
+          "links": [
+            261
+          ]
+        },
+        {
+          "label": "usage_instruction",
+          "name": "usage_instruction",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "showevr/ComfyUI-Modelscope-All",
+        "ver": "dda461b819caa1980fb386e8cb2e7cefc4642204",
+        "Node name for S&R": "ModelScopeImageEditorV3_Sevr"
+      },
+      "widgets_values": [
+        "",
+        "改写写实风格，提高画质，细节丰富，清晰",
+        "偏黄，暗黄，模糊，欧美人，黑人，色调艳丽，过曝，细节模糊不清，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，杂乱的背景，三条腿",
+        8,
+        "AutoSize",
+        50,
+        4,
+        981451545,
+        "randomize",
+        "ms-e3961246-de9a-495a-bcd2-0dcdd696fc17",
+        "Qwen/Qwen-Image-Edit",
+        "Uguu.se",
+        "your-imgbb-api-key-here"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      18,
+      17,
+      0,
+      16,
+      0,
+      "*"
+    ],
+    [
+      25,
+      20,
+      0,
+      16,
+      1,
+      "*"
+    ],
+    [
+      26,
+      21,
+      0,
+      16,
+      2,
+      "*"
+    ],
+    [
+      50,
+      16,
+      0,
+      31,
+      2,
+      "*"
+    ],
+    [
+      51,
+      32,
+      0,
+      31,
+      1,
+      "*"
+    ],
+    [
+      52,
+      30,
+      0,
+      31,
+      0,
+      "*"
+    ],
+    [
+      54,
+      33,
+      0,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      115,
+      46,
+      0,
+      77,
+      0,
+      "IMAGE"
+    ],
+    [
+      119,
+      29,
+      0,
+      79,
+      1,
+      "STRING"
+    ],
+    [
+      121,
+      14,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      123,
+      68,
+      0,
+      81,
+      1,
+      "STRING"
+    ],
+    [
+      143,
+      81,
+      0,
+      93,
+      0,
+      "*"
+    ],
+    [
+      144,
+      94,
+      0,
+      92,
+      0,
+      "*"
+    ],
+    [
+      145,
+      20,
+      0,
+      92,
+      1,
+      "*"
+    ],
+    [
+      146,
+      21,
+      0,
+      92,
+      2,
+      "*"
+    ],
+    [
+      147,
+      92,
+      0,
+      93,
+      1,
+      "INT"
+    ],
+    [
+      148,
+      18,
+      0,
+      95,
+      0,
+      "*"
+    ],
+    [
+      149,
+      31,
+      0,
+      95,
+      1,
+      "INT"
+    ],
+    [
+      150,
+      80,
+      0,
+      95,
+      2,
+      "STRING"
+    ],
+    [
+      151,
+      79,
+      0,
+      95,
+      3,
+      "STRING"
+    ],
+    [
+      152,
+      95,
+      0,
+      93,
+      2,
+      "STRING"
+    ],
+    [
+      155,
+      95,
+      0,
+      68,
+      0,
+      "STRING"
+    ],
+    [
+      156,
+      93,
+      0,
+      24,
+      0,
+      "STRING"
+    ],
+    [
+      157,
+      24,
+      0,
+      82,
+      0,
+      "STRING"
+    ],
+    [
+      164,
+      18,
+      0,
+      112,
+      0,
+      "*"
+    ],
+    [
+      165,
+      80,
+      0,
+      112,
+      2,
+      "STRING"
+    ],
+    [
+      166,
+      112,
+      0,
+      29,
+      1,
+      "STRING"
+    ],
+    [
+      167,
+      113,
+      0,
+      112,
+      1,
+      "INT"
+    ],
+    [
+      168,
+      20,
+      0,
+      113,
+      1,
+      "*"
+    ],
+    [
+      169,
+      21,
+      0,
+      113,
+      2,
+      "*"
+    ],
+    [
+      170,
+      17,
+      0,
+      113,
+      0,
+      "*"
+    ],
+    [
+      260,
+      77,
+      0,
+      175,
+      0,
+      "IMAGE"
+    ],
+    [
+      261,
+      175,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      263,
+      82,
+      0,
+      177,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "ModelScope 文生图_二选一",
+      "bounding": [
+        -697,
+        862,
+        691.5001831054688,
+        668.7714233398438
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "ModelScope 生成提示词：开启手动输入则自动忽略图片反推，关闭手动输入则自动调用图片反推",
+      "bounding": [
+        -1761,
+        862,
+        1058.4757080078125,
+        667.036865234375
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "启用手动输入",
+      "bounding": [
+        -1756,
+        900,
+        210.8562774658203,
+        112.42069244384766
+      ],
+      "color": "#A88",
+      "font_size": 16,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "手动输入",
+      "bounding": [
+        -1539,
+        1077,
+        215.00743103027344,
+        164.92538452148438
+      ],
+      "color": "#b58b2a",
+      "font_size": 16,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "启用大语言模型优化提示词",
+      "bounding": [
+        -1756,
+        1018,
+        210.8430633544922,
+        111.76705932617188
+      ],
+      "color": "#A88",
+      "font_size": 16,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "最终提示词展示",
+      "bounding": [
+        -1008,
+        900,
+        300.8907470703125,
+        624.9271850585938
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "图片反推提示词 (ModelScope视觉多模态)",
+      "bounding": [
+        -1322,
+        900,
+        310.2170715332031,
+        624.90625
+      ],
+      "color": "#8AA",
+      "font_size": 16,
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "要求AI修改-话术开头",
+      "bounding": [
+        -1540,
+        900,
+        213.5786590576172,
+        170.57211303710938
+      ],
+      "color": "#8A8",
+      "font_size": 12,
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "ModelScope 图片编辑_二选一",
+      "bounding": [
+        -3,
+        862,
+        1003.372802734375,
+        667.8666381835938
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "将提示词翻译成英文",
+      "bounding": [
+        -1756,
+        1134,
+        211.24539184570312,
+        110.85945892333984
+      ],
+      "color": "#A88",
+      "font_size": 16,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "文生图&图生图 二选一",
+      "bounding": [
+        -1756,
+        1253,
+        214.5541534423828,
+        270.5886535644531
+      ],
+      "color": "#A88",
+      "font_size": 16,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5821848051466926,
+      "offset": [
+        1852.240091719076,
+        -381.7476055208131
+      ]
+    },
+    "frontendVersion": "1.28.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
