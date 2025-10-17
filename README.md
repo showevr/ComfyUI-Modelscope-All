@@ -3,9 +3,13 @@ Enter the ModelScope token (access token) and then call the model on ModelScope 
 输入 ModelScope 令牌（访问令牌），然后在本地Comfyui中调用 ModelScope 上的模型以生成图像
 
 ModelScope访问令牌获取方式：
+
 1.登录网站：https://modelscope.cn 
-2.转到访问令牌页面复制：https://modelscope.cn/my/overview
+
+2.转到访问令牌页面复制：[https://modelscope.cn/my/overview](https://modelscope.cn/my/myaccesstoken)
+
   注意：令牌以【ms-】开头
+  
 3.将令牌（api_key）填入节点中即可正常使用
 
 目前已知的准确信息：
